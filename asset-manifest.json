@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/EmployeeLeaveManagementSystem/static/css/main.784d66b1.css",
-    "main.js": "/EmployeeLeaveManagementSystem/static/js/main.f2d70b2f.js",
+    "main.js": "/EmployeeLeaveManagementSystem/static/js/main.82533fae.js",
     "index.html": "/EmployeeLeaveManagementSystem/index.html",
     "main.784d66b1.css.map": "/EmployeeLeaveManagementSystem/static/css/main.784d66b1.css.map",
-    "main.f2d70b2f.js.map": "/EmployeeLeaveManagementSystem/static/js/main.f2d70b2f.js.map"
+    "main.82533fae.js.map": "/EmployeeLeaveManagementSystem/static/js/main.82533fae.js.map"
   },
   "entrypoints": [
     "static/css/main.784d66b1.css",
-    "static/js/main.f2d70b2f.js"
+    "static/js/main.82533fae.js"
   ]
 }
