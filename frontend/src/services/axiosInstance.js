@@ -1,7 +1,14 @@
 import axios from "axios";
 
+// Dynamically check if the user is running the app locally or on GitHub Pages
+const isProduction = window.location.hostname !== 'localhost';
+
+const API_URL = isProduction
+  ? 'https://employeeleavemanagementsystembackend.onrender.com/api' // Your live Render API
+  : 'http://localhost:5000/api';                                  // Your local development API
+
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: API_URL,
 });
 
 axiosInstance.interceptors.request.use(
@@ -9,8 +16,7 @@ axiosInstance.interceptors.request.use(
     const token = localStorage.getItem("token");
 
     if (token) {
-      config.headers.Authorization =
-        `Bearer ${token}`;
+      config.headers.Authorization = `Bearer ${token}`;
     }
 
     return config;
