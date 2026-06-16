@@ -4,7 +4,7 @@ import axios from "axios";
 const isProduction = window.location.hostname !== 'localhost';
 
 const API_URL = isProduction
-  ? 'https://employeeleavemanagementsystembackend.onrender.com/api' // Your live Render API
+  ? 'https://employeeleavemanagementsystembackend.onrender.com' // Your live Render API
   : 'http://localhost:5000/api';                                  // Your local development API
 
 const axiosInstance = axios.create({
