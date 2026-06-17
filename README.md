@@ -114,7 +114,7 @@ https://abinrajk.github.io/EmployeeLeaveManagementSystem
 | Variable    | Description                                      | Example Value                                                        |
 |-------------|--------------------------------------------------|----------------------------------------------------------------------|
 | `PORT`      | Port on which the backend server runs            | `5000`                                                               |
-| `MONGO_URI` | MongoDB connection string (Atlas or local)       | `mongodb+srv://<user>:<password>@cluster0.fcf3bsb.mongodb.net/<db>` |
+| `MONGO_URI` | MongoDB connection string (Atlas or local)       | `mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/<db>` |
 | `JWT_SECRET`| Secret key used to sign and verify JWT tokens   | `your_super_secret_jwt_key`                                          |
 | `NODE_ENV`  | Application environment                          | `development`                                                        |
 
@@ -122,7 +122,7 @@ Example `backend/.env`:
 
 ```
 PORT=5000
-MONGO_URI=mongodb+srv://abin2794:abinrajk27@cluster0.fcf3bsb.mongodb.net/employee_leave_management
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/employee_leave_management
 JWT_SECRET=your_super_secret_jwt_key
 NODE_ENV=development
 ```
