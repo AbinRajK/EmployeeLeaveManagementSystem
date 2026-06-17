@@ -1,20 +1,17 @@
 import "./LeaveTable.css";
 
 function LeaveTable({ leaves, isManager = false, onStatusChange }) {
-  // Function to format date as YYYY-MM-DD
   const formatDate = (dateString) => {
     if (!dateString) return "N/A";
     const date = new Date(dateString);
-    return date.toISOString().split("T")[0]; // Extracts YYYY-MM-DD
+    return date.toISOString().split("T")[0];
   };
 
-  // Function to calculate days between fromDate and toDate
   const calculateDays = (fromDate, toDate) => {
     const start = new Date(fromDate);
     const end = new Date(toDate);
     const timeDiff = end - start;
-    const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) + 1; // Inclusive of both start and end dates
-    return daysDiff;
+    return Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) + 1;
   };
 
   return (
@@ -49,20 +46,24 @@ function LeaveTable({ leaves, isManager = false, onStatusChange }) {
                 <td>
                   <span className={`status ${leave.status}`}>{leave.status}</span>
                 </td>
-                {isManager && leave.status === "pending" && (
+                {isManager && (
                   <td>
-                    <button
-                      className="approve-btn"
-                      onClick={() => onStatusChange(leave._id, "approved")}
-                    >
-                      Approve
-                    </button>
-                    <button
-                      className="reject-btn"
-                      onClick={() => onStatusChange(leave._id, "rejected")}
-                    >
-                      Reject
-                    </button>
+                    {leave.status === "pending" && (
+                      <>
+                        <button
+                          className="approve-btn"
+                          onClick={() => onStatusChange(leave._id, "approved")}
+                        >
+                          Approve
+                        </button>
+                        <button
+                          className="reject-btn"
+                          onClick={() => onStatusChange(leave._id, "rejected")}
+                        >
+                          Reject
+                        </button>
+                      </>
+                    )}
                   </td>
                 )}
               </tr>

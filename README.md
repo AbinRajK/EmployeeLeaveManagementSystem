@@ -6,12 +6,29 @@ A full-stack web application that allows employees to apply for leave and manage
 
 ## Table of Contents
 
+- [Screenshots](#screenshots)
 - [Setup Instructions](#setup-instructions)
 - [Environment Variables](#environment-variables)
 - [Application Architecture](#application-architecture)
 - [API Reference](#api-reference)
 - [Business Rules](#business-rules)
 - [Features](#features)
+
+---
+
+## Screenshots
+
+### Login
+![Login](./screenshots/login.png)
+
+### Register
+![Register](./screenshots/register.png)
+
+### Employee Dashboard
+![Employee Dashboard](./screenshots/employeedashboard.png)
+
+### Manager Dashboard
+![Manager Dashboard](./screenshots/managerdashboard.png)
 
 ---
 

@@ -7,10 +7,6 @@ const leaveSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    leaveType: {
-      type: String,
-      required: true,
-    },
     fromDate:     { type: Date, required: true },
     toDate:       { type: Date, required: true },
     numberOfDays: { type: Number, required: true },
